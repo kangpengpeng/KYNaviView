@@ -1,0 +1,16 @@
+PODS:
+  - KYNaviView (0.3.2)
+
+DEPENDENCIES:
+  - KYNaviView (from `../`)
+
+EXTERNAL SOURCES:
+  KYNaviView:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  KYNaviView: 9255fc972efbdf4b5af3f908a73bbd840fe10446
+
+PODFILE CHECKSUM: 2e4e63c717b4c6fd88d06740eec59405ff2dd876
+
+COCOAPODS: 1.11.0

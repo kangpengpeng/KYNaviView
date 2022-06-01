@@ -1,0 +1,16 @@
+source 'https://gitee.com/kangpp/kycomponent-spec.git'
+
+use_frameworks!
+
+platform :ios, '9.0'
+
+target 'KYNaviView_Example' do
+  pod 'KYNaviView', :path => '../'
+#  pod 'KYNaviView'
+  
+  target 'KYNaviView_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end

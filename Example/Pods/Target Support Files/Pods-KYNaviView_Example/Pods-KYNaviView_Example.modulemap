@@ -1,0 +1,6 @@
+framework module Pods_KYNaviView_Example {
+  umbrella header "Pods-KYNaviView_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}
