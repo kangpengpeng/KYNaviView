@@ -60,7 +60,8 @@
     // 导航根控制器，不显示返回按钮
     if (self.navigationController.viewControllers.firstObject == self) {
         [self initData];
-        [self setEdgesTop:_edgesTop];
+        // 加上以后，导航控制器首页面隐藏和显示导航栏时，不能自动更新 controller.view 的高度
+        //[self setEdgesTop:_edgesTop];
         [self hiddenNaviBackBtn:YES];
     }
     
@@ -72,13 +73,14 @@
         [self.navigatinPageStatusDelegate ky_viewDidLoad:self.naviContext];
     }
     
+    /* 此接口要放到 viewDidAppear 中执行
     if (self.ky_addCustomView) {
         self.ky_addCustomView(self.naviContext);
     }
     if (self.navigationDelegate && [self.navigationDelegate respondsToSelector:@selector(ky_addCustomView:)]) {
         [self.navigationDelegate ky_addCustomView:self.naviContext];
     }
-  
+     */
 }
 
 #pragma mark: - 通用/常用方法
@@ -382,6 +384,12 @@
     }
     if (self.navigatinPageStatusDelegate && [self.navigatinPageStatusDelegate respondsToSelector:@selector(ky_viewDidAppear:)]) {
         [self.navigatinPageStatusDelegate ky_viewDidAppear:self.naviContext];
+    }
+    if (self.ky_addCustomView) {
+        self.ky_addCustomView(self.naviContext);
+    }
+    if (self.navigationDelegate && [self.navigationDelegate respondsToSelector:@selector(ky_addCustomView:)]) {
+        [self.navigationDelegate ky_addCustomView:self.naviContext];
     }
 }
 - (void)viewWillDisappear:(BOOL)animated {

@@ -1,5 +1,5 @@
 PODS:
-  - KYNaviView (0.3.2)
+  - KYNaviView (0.3.3)
 
 DEPENDENCIES:
   - KYNaviView (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  KYNaviView: 9255fc972efbdf4b5af3f908a73bbd840fe10446
+  KYNaviView: 4221b2d543dca332d84ca3cf2f4d062183208268
 
 PODFILE CHECKSUM: 2e4e63c717b4c6fd88d06740eec59405ff2dd876
 

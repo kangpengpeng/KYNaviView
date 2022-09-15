@@ -1,9 +1,9 @@
 {
   "name": "KYNaviView",
-  "version": "0.3.2",
+  "version": "0.3.3",
   "summary": "自定义导航栏",
   "description": "自定义导航栏，及控制器使用",
-  "homepage": "https://gitee.com/kangpp/kynavi-view",
+  "homepage": "https://github.com/kangpengpeng/KYNaviView",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
@@ -12,8 +12,8 @@
     "kangpengpeng": "353327533@qq.com"
   },
   "source": {
-    "git": "https://gitee.com/kangpp/kynavi-view.git",
-    "tag": "0.3.2"
+    "git": "https://github.com/kangpengpeng/KYNaviView.git",
+    "tag": "0.3.3"
   },
   "platforms": {
     "ios": "9.0"

@@ -22,7 +22,21 @@
     self.ky_didTouchTitle = ^(KYNaviContext * _Nonnull context) {
         NSLog(@"导航栏标题被点击！！！");
     };
-    
+    __weak typeof(self) weakSelf = self;
+    self.ky_addCustomView = ^(KYNaviContext * _Nonnull context) {
+        UIButton *rightItem = [[UIButton alloc] init];
+        //rightItem.backgroundColor = [UIColor redColor];
+        [rightItem setTitle:@"我的合同" forState:UIControlStateNormal];
+        [rightItem setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
+        NSLog(@"*** %@", rightItem);
+        [rightItem sizeToFit];
+        CGFloat itemW = rightItem.frame.size.width;
+        CGFloat itemH = rightItem.frame.size.height;
+        CGFloat itemX = context.navigationView.frame.size.width - itemW - 20;
+        CGFloat itemY = [weakSelf getStatusBarHeight] + ((context.navigationView.frame.size.height - [weakSelf getStatusBarHeight]) - itemH) / 2;
+        rightItem.frame = CGRectMake(itemX, itemY, itemW, itemH);
+        [context.navigationView addSubview:rightItem];
+    };
 }
 
 //- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
